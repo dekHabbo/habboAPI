@@ -1,5 +1,5 @@
-# habboEnhancer
-Greasemonkey script for checking names, registering accounts and offering a quick-launch Habbo button.
+# habboAPI
+Documenting data which is locked behind login on Habbo.com
 
 ## API Documentation
 
@@ -71,7 +71,7 @@ This endpoint is used to create a new Habbo account.
 
 ##### Request
 
-To create a new account, replace `USERNAME` in the request body with the desired username.
+To create a new account, replace `TESTNAME` in the request body with the desired username.
 
 ```javascript
 fetch("https://www.habbo.com/api/user/avatars", {
@@ -89,7 +89,7 @@ fetch("https://www.habbo.com/api/user/avatars", {
         "Sec-Fetch-Site": "same-origin"
     },
     referrer: "https://www.habbo.com/settings/avatars",
-    body: "{\"name\":\"dektest989\"}",
+    body: "{\"name\":\"TESTNAME\"}",
     method: "POST",
     mode: "cors"
 });
@@ -103,8 +103,8 @@ The response is a JSON object containing the following properties:
 - `name` (string): The username of the created account.
 - `figureString` (string): The figure string associated with the account.
 - `motto` (string): The motto of the account.
-- `buildersClubMember` (boolean): Indicates whether the account has Builders Club membership.
-- `habboClubMember` (boolean): Indicates whether the account has Habbo Club membership.
+- `buildersClubMember` (boolean): Indicates whether the account has a current Builders Club membership.
+- `habboClubMember` (boolean): Indicates whether the account has a current Habbo Club.
 - `lastWebAccess` (string): The timestamp of the last web access for the account.
 - `creationTime` (string): The timestamp of the account creation.
 
