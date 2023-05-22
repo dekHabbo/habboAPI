@@ -89,9 +89,7 @@ fetch("https://www.habbo.com/api/user/avatars", {
         "Sec-Fetch-Site": "same-origin"
     },
     referrer: "https://www.habbo.com/settings/avatars",
-    body: JSON.stringify({
-        "name": "USERNAME"
-    }),
+    body: "{\"name\":\"dektest989\"}",
     method: "POST",
     mode: "cors"
 });
